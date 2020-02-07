@@ -1,0 +1,55 @@
+.arrow{
+	text-align: right;
+}
+
+.assignment{
+	border-radius: 10px;
+	margin-right: 100px;
+	margin-left: 100px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+}
+
+.mainbody{
+	padding-bottom: 50px;
+}
+
+#alist{
+	text-align: center;
+}
+
+#header{
+	height: 20px;
+}
+
+#home{
+	height: 10px;
+}
+
+#date{
+	text-align: left;
+	margin-left: 100px;
+	margin-top: 25px;
+	height: 20px;
+}
+
+#hmbgr{
+	padding-left: 10px;
+}
+
+#add{
+	padding-right: 10px;
+}
+
+#container{
+	padding-top: 10px;
+}
+
+#content{
+	text-align: center;
+}
+
+#header{
+	text-align: center;
+}
+

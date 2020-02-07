@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+
+    <head>
+        <title>COGS120-A5</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <script src="https://code.jquery.com/jquery.js"></script>   
+        <script src="js/bootstrap.js"></script>
+
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/bootstrap-theme.css" rel="stylesheet">
+        <link href="css/add.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="mainbody" style = "background-color: #d4f1ff">
+
+           <div id="icon" style="clear: both">
+               <a href="/">
+                    <img class="bicon" src="back.png" height=40px style = "float: left" />
+               </a>
+               <a href="/">
+                    <img class="aicon" src="done.png" height=40px style = "float: right" />
+               </a>
+           </div>
+       
+           <div id="container">
+
+                <div id="header">
+                   <h2> <b>Add Assignment</b> </h2>
+                </div>
+                <hr id="border"/>
+
+                <div id="title">
+                   <h3> <u>Title</u> </h3>
+                   <div class = "atitle" style="background-color: #d4f1ff">
+                       <input id="ainput" type = "text" id = "myText" value="Assignment 2">
+                   </div>
+                </div>
+
+                <div id="due">
+                    <h3> <u>Due Date</u> </h3>
+                    <img src="calendar.png" width=260px/>
+                </div>
+
+                <div id="repeat">
+                    <h3> <u>Repeat</u> </h3>
+                    <select>
+                        <option value="Never">Never</option>
+                        <option value="Daily">Daily</option>
+                        <option value="Weekly">Weekly</option>
+                        <option value="Biweekly">Biweekly</option>
+                        <option value="Monthly">Monthly</option>
+                    </select>
+                </div>
+           
+                <div id="notification">
+                    <h3> <u>Notification</u> </h3>
+                    <select>
+                        <option value="Never">Never</option>
+                        <option value="Daily">Daily</option>
+                        <option value="Weekly">Weekly</option>
+                        <option value="Biweekly">Biweekly</option>
+                        <option value="Monthly">Monthly</option>
+                    </select>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </body>
+
+</html>

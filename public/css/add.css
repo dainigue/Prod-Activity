@@ -1,0 +1,32 @@
+.mainbody{
+	padding-bottom: 50px;
+}
+
+#container{
+	text-align: center;
+	padding-top: 10px;
+}
+
+#atitle{
+	text-align: center;
+}
+
+#ainput{
+	text-align: center;
+}
+
+#icon{
+	padding-top: 10px;
+}
+
+#darrow{
+	padding-right: 5px;
+}
+
+.bicon{
+	padding-left: 10px;
+}
+
+.aicon{
+	padding-right: 10px;
+}
