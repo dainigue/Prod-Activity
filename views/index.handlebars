@@ -8,27 +8,36 @@
 
         <script src="https://code.jquery.com/jquery.js"></script>   
         <script src="js/bootstrap.js"></script>
+        <script src="js/prod-activity.js"></script>
 
         <link href="css/bootstrap.css" rel="stylesheet">
         <link href="css/bootstrap-theme.css" rel="stylesheet">
-        <link href="css/main.css" rel="stylesheet">
+        <link href="css/index.css" rel="stylesheet">
     </head>
 
     <body>
+
+        <div id="sideNav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <a href="/">Home</a>
+          <a href="/profile">Profile</a>
+          <a href="#">Settings</a>
+        </div>
+
         <div class="mainbody" style = "background-color: #e6e2da">
 
            <div id="container">
                    
                 <div id="add" class = "icon">
-                   <a href="/add">
-                      <img src="add.png" height=40px style = "float: right" />
-                   </a>
+                    <a href="/add">
+                        <img src="add.png" height=40px style = "float: right" />
+                    </a>
                </div>
 
                <div id= "hmbgr" class = "icon">
-                    <a href="/">
+                    <span onclick="openNav()">
                         <img src="hamburger.png" height=40px style = "float: left" />
-                    </a>
+                    </span>
                </div>
 
                <div id="header">
