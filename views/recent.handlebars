@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+
+    <head>
+        <title>Recently Completed</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <script src="https://code.jquery.com/jquery.js"></script>   
+        <script src="js/jquery-1.11.0.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/prod-activity.js"></script>
+        <script src="js/sidenav.js"></script>
+
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/bootstrap-theme.css" rel="stylesheet">
+        <link href="css/index.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <div id="sideNav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <a href="/index">Home</a>
+          <a href="/profile">Profile</a>
+          <a href="redeem">Redeem Points</a>
+        </div>
+
+        <div class="mainbody" style = "background-color: #e6e2da">
+
+           <div id="container" style = "background-color: #e6e2da">
+                   
+                <div id="add" class = "icon">
+                   <a href="/add">
+                      <img src="add.png" height=40px style = "float: right" />
+                   </a>
+               </div>
+
+               <div id= "hmbgr" class = "icon">
+                    <span onclick="openNav()">
+                        <img src="hamburger.png" height=40px style = "float: left" />
+                    </span>
+               </div>
+
+               <div id="header">
+                   <h2> <b>PRO'D ACTIVITY</b> </h2>
+               </div>
+
+               <div id="content">
+
+                   <div id="home">
+                      <h3>Home</h3>
+                   </div>
+                   <hr/>
+
+                   <div id="displayPoints" style="color:#dea300">
+                        <h4>Current Points</h4>
+                        <h3>{{currPoints}}pts<h3>
+                   </div>
+
+                   <div id="rlist">
+                        <h4> 
+                          <b>Recently Completed</b> 
+                          <a href="/index" id="view-list">
+                            View List
+                          </a>
+                        </h4>
+                   </div>
+
+
+
+                {{#each recent}}
+                <div class="assignment" id="{{id}}" style ="background-color: {{color}}">
+                  <h4 id="due">
+                    DUE: {{date}}
+                    <img id="check-mark"src="done.png">
+                    <h4 style="color:#dea300">{{points}}pts</h4>
+                  </h4>
+                  <a href="#" class="thumbnail">
+                    <h3>{{course}}</h3>
+                    <h4>{{title}}</h4>
+                  </a>
+                  <div class="thumbnail, hideInfo">
+                    <h5 style="color:black">{{description}}</h5>
+                  </div>
+
+                </div>
+                <br>
+                {{/each}}
+
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,44 @@
+{	
+	"totalPoints" : 0,
+	"currPoints" : 0,
+	"assignments": [
+		{
+			"id" : 1,
+			"course": "COGS 120",
+			"title" : "A5",
+			"date" : "20 Jan 2020",
+			"color" : "green",
+			"points" : 25,
+			"description" : "User's inputted description for this assignment"
+		},
+		{
+			"id" : 2,
+			"course": "DSGN 160",
+			"title" : "Reading Reflection",
+			"date" : "28 Jan 2020",
+			"color" : "#ff9999",
+			"points" : 15,
+			"description" : "User's inputted description for this assignment"
+		},
+		{
+			"id" : 3,
+			"course": "CSE 100",
+			"title" : "PA 7",
+			"date" : "20 Feb 2020",
+			"color" : "#99ccff",
+			"points" : 35,
+			"description" : "User's inputted description for this assignment"
+
+		},
+		{
+			"id" : 4,
+			"course": "TDGE 100",
+			"title" : "Essay 3",
+			"date" : "20 Feb 2020",
+			"color" : "#92ccf4",
+			"points" : 20,
+			"description" : "User's inputted description for this assignment"
+		}
+	],
+	"recent": []		
+}

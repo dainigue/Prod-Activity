@@ -17,31 +17,28 @@ html{
 	padding-right: 10px;
 }
 
+.form-group{
+	padding-right: 40px;
+	padding-left: 40px;
+}
+
 #container{
 	text-align: center;
 	padding-top: 10px;
-}
-
-#atitle{
-	text-align: center;
-}
-
-#ainput{
-	text-align: center;
 }
 
 #icon{
 	padding-top: 10px;
 }
 
-#darrow{
-	padding-right: 5px;
+#repeat{
+	padding-bottom: 10px;
+}
+
+#notification{
+	padding-bottom: 20px;
 }
 
 .bicon{
 	padding-left: 10px;
-}
-
-.aicon{
-	padding-right: 10px;
 }

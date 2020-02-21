@@ -7,8 +7,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <script src="https://code.jquery.com/jquery.js"></script>   
+        <script src="js/jquery-1.11.0.js"></script>
         <script src="js/bootstrap.js"></script>
         <script src="js/prod-activity.js"></script>
+        <script src="js/sidenav.js"></script>
 
         <link href="css/bootstrap.css" rel="stylesheet">
         <link href="css/bootstrap-theme.css" rel="stylesheet">
@@ -19,19 +21,19 @@
 
         <div id="sideNav" class="sidenav">
           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-          <a href="/">Home</a>
+          <a href="/index">Home</a>
           <a href="/profile">Profile</a>
-          <a href="#">Settings</a>
+          <a href="redeem">Redeem Points</a>
         </div>
 
         <div class="mainbody" style = "background-color: #e6e2da">
 
-           <div id="container">
+           <div id="container" style = "background-color: #e6e2da">
                    
                 <div id="add" class = "icon">
-                    <a href="/add">
-                        <img src="add.png" height=40px style = "float: right" />
-                    </a>
+                   <a href="/add">
+                      <img src="add.png" height=40px style = "float: right" />
+                   </a>
                </div>
 
                <div id= "hmbgr" class = "icon">
@@ -51,36 +53,39 @@
                    </div>
                    <hr/>
 
-                   <div id="alist">
-                        <h4> <b>Assignment List</b> </h4>
+                   <div id="displayPoints" style="color:#dea300">
+                        <h4>Current Points</h4>
+                        <h3>{{currPoints}}pts<h3>
                    </div>
 
-            	   <div id="date">
-            	       <h4>Today - Feb 6</h4>
-            	   </div>
+                   <div id="alist">
+                        <h4> 
+                          <b>Assignment List</b> 
+                          <a href="/recent" id="view-recent">
+                            View Recent
+                          </a>
+                        </h4>
+                   </div>
 
-            	   <div class="assignment" style = "background-color: #de4b38">
-            		  <h3>COGS 120</h3>
-            		  <h4>A5</h4>
-            	   </div>
 
-            	   <div id="date">
-            		  <h4>Tomorrow - Feb 7</h4>
-            	   </div>
 
-            	   <div class="assignment" style = "background-color: #e0c96b">
-            		  <h3>DSGN 160</h3>
-            		  <h4>Reading Reflection</h4>
-            	   </div>
+                {{#each assignments}}
+                <div class="assignment" id="{{id}}" style ="background-color: {{color}}">
+                  <h4 id="due">DUE: {{date}}</h4>
+                  <a href="#" class="thumbnail">
+                    <h3>{{course}}</h3>
+                    <h4>{{title}}</h4>
+                  </a>
+                  <div class="thumbnail, hideInfo">
+                    <h5 style="color:black">{{description}}</h5>
+                    <h4 id="points">Value: {{points}}pts</h4>
+                      <button title="{{points}}" class="removeAssignment" id="remove">Remove</button>
+                      <button title="{{points}}" class="removeAssignment" id="complete">Complete</button>
+                  </div>
 
-            	   <div id="date">
-            		  <h4>Monday - Feb 10</h4>
-                    </div>
-
-            	   <div class="assignment" style = "background-color: #84c3e3">
-            		  <h3>CSE 100</h3>
-            		  <h4>PA 7</h4>
-            	   </div>
+                </div>
+                <br>
+                {{/each}}
 
                 </div>
             </div>

@@ -5,9 +5,14 @@
         <title>COGS120-A5</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+        
+        <script src="js/jquery-1.11.0.js"></script>
         <script src="https://code.jquery.com/jquery.js"></script>   
         <script src="js/bootstrap.js"></script>
+        <script src="js/prod-activity.js"></script>
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+        <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 
         <link href="css/bootstrap.css" rel="stylesheet">
         <link href="css/bootstrap-theme.css" rel="stylesheet">
@@ -18,11 +23,8 @@
         <div class="mainbody" style = "background-color: #e6e2da">
 
            <div id="icon" style="clear: both">
-               <a href="/">
+               <a href="/index">
                     <img class="bicon" src="back.png" height=40px style = "float: left" />
-               </a>
-               <a href="/">
-                    <img class="aicon" src="done.png" height=40px style = "float: right" />
                </a>
            </div>
        
@@ -33,20 +35,41 @@
                 </div>
                 <hr id="border"/>
 
-                <div id="title">
-                   <h3> <u>Title</u> </h3>
-                   <div class = "atitle" style="background-color: #e6e2da">
-                       <input id="ainput" type = "text" id = "myText" value="Assignment 2">
-                   </div>
+
+            <form id="addAssignment" role="form" method="get" action="/added">
+                
+                <div class="form-group">
+                  <label for="course">Course:</label>
+                  <input type="text" class="form-control" id="course" placeholder="Course" name="course" required>
                 </div>
 
-                <div id="due">
-                    <h3> <u>Due Date</u> </h3>
-                    <img src="calendar.png" width=260px/>
+                <div class="form-group">
+                  <label for="title">Title:</label>
+                  <input type="text" class="form-control" id="title" placeholder="Title" name="title" required>
                 </div>
 
+                <div class="form-group">
+                  <label for="duedate">Due Date:</label>
+                  <input type="text" class="form-control" id="datepicker" placeholder="Due Date" name="duedate" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="description">Description:</label>
+                  <input type="text" class="form-control" id="description" placeholder="Description" name="description" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="points">Points:</label>
+                  <input type="text" class="form-control" id="points" placeholder="Points" name="points">
+                </div>
+
+                <div class="form-group">
+                  <label for="color">Color:</label>
+                  <input type="text" class="form-control" id="color" placeholder="Green" name="color">
+                </div>
+
+                <label>Repeat</label>
                 <div id="repeat">
-                    <h3> <u>Repeat</u> </h3>
                     <select>
                         <option value="Never">Never</option>
                         <option value="Daily">Daily</option>
@@ -56,8 +79,8 @@
                     </select>
                 </div>
            
+                <label>Notification</lablel>
                 <div id="notification">
-                    <h3> <u>Notification</u> </h3>
                     <select>
                         <option value="Never">Never</option>
                         <option value="Daily">Daily</option>
@@ -65,12 +88,12 @@
                         <option value="Biweekly">Biweekly</option>
                         <option value="Monthly">Monthly</option>
                     </select>
-
                 </div>
 
-            </div>
+                <input type="submit" id="submitBtn" class="btn btn-default" value="Add the assignment"></input>
+            </form>
 
-        </div>
+            </div>
 
     </body>
 

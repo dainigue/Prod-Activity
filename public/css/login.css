@@ -1,0 +1,41 @@
+*{
+	text-align: center;
+	padding: 5px;
+}
+
+li{
+	list-style-type: none;
+	text-align: center;
+	padding-bottom: 5%;
+}
+
+input{
+	background-size: #333;
+	border: none;
+}
+
+.container {
+	font-family: : sans-serif;
+	/*border: 2px solid grey;*/
+	/*width: 24%;*/
+	text-align: center;
+	margin: auto;
+	/*border-radius: 12px;*/
+	background-color: white;
+	/*padding-bottom: 10px;*/
+}
+
+
+.username {
+	background-color: grey;
+	border-radius: 4px;
+}
+
+.password {
+	background-color: grey;
+	border-radius: 4px;
+}
+
+.submit {
+	background-color: skyblue;
+}
